@@ -21,8 +21,6 @@ public class UserEntity {
     @Column(nullable = false)
     private String nameUser;
     @Column(nullable = false, unique = true)
-    private int numberAccount;
-    @Column(nullable = false, unique = true)
     private String cpfUser;
     @Column(nullable = false)
     private LocalDateTime creationDate;
@@ -31,5 +29,7 @@ public class UserEntity {
     @Column(nullable = false, unique = true)
     private String password;
     private LocalDateTime dateOfExclusion;
-    
+    @Column(nullable = false, unique = true)
+    private String phoneNumber;
+
 }
