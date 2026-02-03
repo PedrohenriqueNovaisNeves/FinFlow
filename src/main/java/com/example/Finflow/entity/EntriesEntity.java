@@ -35,4 +35,5 @@ public class EntriesEntity {
     @ManyToOne(optional = false)
     @JoinColumn(name = "numberAccount", nullable = false)
     private AccountEntity numberAccount;
+
 }

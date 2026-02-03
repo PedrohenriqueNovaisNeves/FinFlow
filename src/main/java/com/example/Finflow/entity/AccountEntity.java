@@ -3,8 +3,13 @@ package com.example.Finflow.entity;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import com.example.Finflow.enums.AccountType;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,7 +30,9 @@ public class AccountEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idAccount;
     private BigDecimal balance;
-    private String type;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private AccountType type;
     @Column(nullable = false)
     private String bankName;
     @Column(nullable = false)
