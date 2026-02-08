@@ -25,7 +25,7 @@ public class EntriesEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID idEntries;
+    private UUID idEntries;  
     @Column(nullable = false)
     private LocalDateTime entryDate;
     @Column(nullable = false)
