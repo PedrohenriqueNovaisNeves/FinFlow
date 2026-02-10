@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.Finflow.entity.EntriesEntity;
 
-public interface EntriesRepository extends JpaRepository<UUID, EntriesEntity>{
+public interface EntriesRepository extends JpaRepository<EntriesEntity, UUID>{
 
 }

@@ -1,11 +1,9 @@
 package com.example.Finflow.domain.account.repository;
 
-import java.util.UUID;
-
+import com.example.Finflow.entity.AccountEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.Finflow.entity.AccountEntity;
+import java.util.UUID;
 
-public interface AccountRepository extends JpaRepository<UUID, AccountEntity>{
-
+public interface AccountRepository extends JpaRepository<AccountEntity, UUID> {
 }
